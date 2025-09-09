@@ -1,0 +1,30 @@
+﻿@model HomeViewModel
+
+<h2>Server management</h2>
+
+<div>
+    @if (Model.IsServerRunning)
+    {
+        <a asp-action="StopServer">Stop server</a>
+    }
+    else
+    {
+        <a asp-action="RunServer">Run server</a>
+    }
+</div>
+
+<hr />
+
+<h2>Subscription responses</h2>
+
+@if (Model != null)
+{
+    <ol>
+        @foreach (var subscription in Model.SubscriptionResponse ?? new List<string>())
+        {
+            <li>@subscription</li>
+        }
+    </ol>
+}
+
+<hr>
