@@ -1,19 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MqttDemo.Models;
-using MQTTnet.Server;
+﻿using MQTTnet.Server;
 
 namespace MqttDemo.Helpers
 {
     public class MqttServerHelper
     {
         private static MqttServer? _serverConnection { get; set; }
-
-        private static readonly MqttServerFactory MqttServerFactory = new MqttServerFactory();
-
+        private static readonly MqttServerFactory MqttServerFactory = new();
         private static MqttServer Server
         {
             get

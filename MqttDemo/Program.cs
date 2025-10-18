@@ -35,9 +35,9 @@ foreach (var tuple in contentToPublish)
     Thread.Sleep(1000);
 }
 
-// Print the last messages
+// Print the last messages of all topics
 Console.WriteLine();
-foreach (var topic in topics)
+foreach (var topic in topics) 
     Console.WriteLine($"{topic}-topic final message: {DataTransmissionHelper.GetLastMessageFromTopic(topic)}");
 
 // End of the program

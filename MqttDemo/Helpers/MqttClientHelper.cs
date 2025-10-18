@@ -1,5 +1,4 @@
-﻿using MqttDemo.Models;
-using MQTTnet;
+﻿using MQTTnet;
 using System.Net;
 
 namespace MqttDemo.Helpers
@@ -7,9 +6,7 @@ namespace MqttDemo.Helpers
     public class MqttClientHelper
     {
         private static IMqttClient? _clientConnection { get; set; }
-
         private static readonly MqttClientFactory MqttClientFactory = new MqttClientFactory();
-
         private static readonly MqttClientOptions mqttClientOptions = new MqttClientOptionsBuilder()
             //.WithCredentials("username", "password")
             .WithEndPoint(new DnsEndPoint("localhost", 1883))
