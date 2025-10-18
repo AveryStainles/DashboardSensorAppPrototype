@@ -6,6 +6,7 @@ namespace MqttDemo.Helpers
     {
         private static MqttServer? _serverConnection { get; set; }
         private static readonly MqttServerFactory MqttServerFactory = new();
+
         private static MqttServer Server
         {
             get
