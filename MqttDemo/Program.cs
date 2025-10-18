@@ -26,7 +26,7 @@ foreach (var topic in topics)
     }, topic);
 }
 
-// Public to the topics
+// Publish to the topics
 foreach (var tuple in contentToPublish)
 {
     var topic = tuple.Item1;
@@ -42,4 +42,5 @@ foreach (var topic in topics)
 
 // End of the program
 Console.WriteLine($"{Environment.NewLine}Press enter to close program");
+
 Console.ReadLine();
