@@ -14,7 +14,7 @@
         }
 
         public static string GoUpDirectoryLevelHelper(string path, int depth) => (depth > 0)
-            ? GoUpDirectoryLevelHelper(path.Substring(0, path.LastIndexOf('\\')), depth - 1)
+            ? GoUpDirectoryLevelHelper(path.Substring(0, path.LastIndexOf('\\')), --depth)
             : path.Substring(0, path.LastIndexOf('\\'));
     }
 }
